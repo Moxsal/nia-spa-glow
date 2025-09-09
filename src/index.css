@@ -2,41 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* Nia Spa Aesthetics Design System - Luxurious spa colors and styling
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 30 20% 98%;
+    --foreground: 150 15% 20%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 30 25% 97%;
+    --card-foreground: 150 15% 20%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 30 25% 97%;
+    --popover-foreground: 150 15% 20%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 150 30% 35%;
+    --primary-foreground: 30 25% 97%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 40 35% 85%;
+    --secondary-foreground: 150 20% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 40 30% 92%;
+    --muted-foreground: 150 10% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 45 85% 75%;
+    --accent-foreground: 150 25% 15%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 30 25% 97%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 40 20% 88%;
+    --input: 40 20% 90%;
+    --ring: 150 30% 35%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Spa-specific design tokens */
+    --spa-sage: 150 25% 55%;
+    --spa-sage-light: 150 30% 85%;
+    --spa-sage-dark: 150 35% 25%;
+    --spa-cream: 40 30% 95%;
+    --spa-gold: 45 85% 65%;
+    --spa-gold-light: 45 70% 85%;
+    --spa-warm-white: 30 20% 98%;
+    --spa-text-primary: 150 15% 20%;
+    --spa-text-secondary: 150 10% 45%;
+
+    /* Gradients */
+    --gradient-spa-hero: linear-gradient(135deg, hsl(var(--spa-sage-light)), hsl(var(--spa-cream)));
+    --gradient-spa-card: linear-gradient(180deg, hsl(var(--spa-warm-white)), hsl(var(--spa-cream)));
+    --gradient-spa-accent: linear-gradient(135deg, hsl(var(--spa-gold-light)), hsl(var(--spa-gold)));
+
+    /* Shadows */
+    --shadow-spa-soft: 0 4px 20px -4px hsl(var(--spa-sage) / 0.15);
+    --shadow-spa-medium: 0 8px 30px -8px hsl(var(--spa-sage) / 0.25);
+    --shadow-spa-strong: 0 20px 40px -10px hsl(var(--spa-sage) / 0.3);
+
+    /* Animations */
+    --transition-spa: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spa-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
 

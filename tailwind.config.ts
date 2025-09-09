@@ -57,6 +57,32 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Spa-specific colors
+        spa: {
+          sage: "hsl(var(--spa-sage))",
+          "sage-light": "hsl(var(--spa-sage-light))",
+          "sage-dark": "hsl(var(--spa-sage-dark))",
+          cream: "hsl(var(--spa-cream))",
+          gold: "hsl(var(--spa-gold))",
+          "gold-light": "hsl(var(--spa-gold-light))",
+          "warm-white": "hsl(var(--spa-warm-white))",
+          "text-primary": "hsl(var(--spa-text-primary))",
+          "text-secondary": "hsl(var(--spa-text-secondary))",
+        },
+      },
+      backgroundImage: {
+        "spa-hero": "var(--gradient-spa-hero)",
+        "spa-card": "var(--gradient-spa-card)",
+        "spa-accent": "var(--gradient-spa-accent)",
+      },
+      boxShadow: {
+        "spa-soft": "var(--shadow-spa-soft)",
+        "spa-medium": "var(--shadow-spa-medium)",
+        "spa-strong": "var(--shadow-spa-strong)",
+      },
+      transitionProperty: {
+        "spa": "var(--transition-spa)",
+        "spa-fast": "var(--transition-spa-fast)",
       },
       borderRadius: {
         lg: "var(--radius)",
