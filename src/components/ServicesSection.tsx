@@ -8,36 +8,43 @@ const ServicesSection = () => {
       icon: <Sparkles className="w-8 h-8 text-spa-gold" />,
       title: "Manicure & Pedicure",
       description: "Give your hands and feet the care they deserve. We combine cleansing, exfoliation, and nail perfection to leave you polished, refreshed, and glowing.",
+      tagline: "Perfect for polished elegance year-round"
     },
     {
       icon: <Flower2 className="w-8 h-8 text-spa-gold" />,
       title: "Facials & Skin Rejuvenation",
       description: "Tailored to your skin's needs, our facials deeply hydrate, brighten, and refresh — helping you achieve a natural, radiant glow.",
+      tagline: "Perfect for glowing skin year-round"
     },
     {
       icon: <Heart className="w-8 h-8 text-spa-gold" />,
       title: "Body Contouring",
       description: "Sculpt and redefine your body with safe, non-invasive treatments that smooth and tone your natural curves. Confidence, reimagined.",
+      tagline: "Your confidence, redefined"
     },
     {
       icon: <Sun className="w-8 h-8 text-spa-gold" />,
       title: "Hyperpigmentation Treatment",
       description: "Target dark spots and uneven skin tone with customized therapies that restore brightness and promote a balanced complexion.",
+      tagline: "Gentle, safe, and effective"
     },
     {
       icon: <Droplets className="w-8 h-8 text-spa-gold" />,
       title: "Chemical Peels",
       description: "Unveil smooth, youthful-looking skin. Our gentle peels remove impurities and stimulate renewal for a fresh, revitalized glow.",
+      tagline: "Professional-grade renewal treatments"
     },
     {
       icon: <Zap className="w-8 h-8 text-spa-gold" />,
       title: "Botox & Anti-Aging Care",
       description: "Soften fine lines and refresh your look with expert Botox treatments that enhance your natural beauty while keeping results subtle and refined.",
+      tagline: "Natural results, expert precision"
     },
     {
       icon: <Moon className="w-8 h-8 text-spa-gold" />,
       title: "Relaxation & Wellness Rituals",
       description: "From soothing massages to calming spa therapies, our wellness rituals melt away stress and leave your body, mind, and soul restored.",
+      tagline: "Complete mind, body, and soul restoration"
     }
   ];
 
@@ -68,8 +75,12 @@ const ServicesSection = () => {
                   {service.title}
                 </h3>
 
-                <p className="text-spa-text-secondary mb-8 leading-relaxed">
+                <p className="text-spa-text-secondary mb-4 leading-relaxed">
                   {service.description}
+                </p>
+
+                <p className="text-spa-gold text-sm italic mb-8 font-medium">
+                  {service.tagline}
                 </p>
 
                 <Button className="w-full bg-spa-gold hover:bg-spa-gold-light text-spa-text-primary font-semibold">
