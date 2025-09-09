@@ -75,12 +75,8 @@ const ServicesSection = () => {
                   {service.title}
                 </h3>
 
-                <p className="text-spa-text-secondary mb-4 leading-relaxed">
+                <p className="text-spa-text-secondary mb-8 leading-relaxed">
                   {service.description}
-                </p>
-
-                <p className="text-spa-gold text-sm italic mb-8 font-medium">
-                  {service.tagline}
                 </p>
 
                 <Button className="w-full bg-spa-gold hover:bg-spa-gold-light text-spa-text-primary font-semibold">
