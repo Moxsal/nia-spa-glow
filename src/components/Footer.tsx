@@ -44,11 +44,11 @@ const Footer = () => {
             <ul className="space-y-3 text-spa-cream/80">
               <li className="flex items-center gap-2">
                 <MapPin size={16} className="text-spa-gold flex-shrink-0" />
-                <span className="text-sm">123 Admiralty Way, Lekki Phase 1</span>
+                <span className="text-sm">20 Dele Adeyemi Street, Agungi East Estate</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone size={16} className="text-spa-gold flex-shrink-0" />
-                <span className="text-sm">+234 (0) 123 456 7890</span>
+                <span className="text-sm">+2347015545783</span>
               </li>
               <li className="flex items-center gap-2">
                 <Mail size={16} className="text-spa-gold flex-shrink-0" />

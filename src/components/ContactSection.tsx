@@ -9,7 +9,7 @@ const ContactSection = () => {
     {
       icon: <Phone className="w-6 h-6 text-spa-gold" />,
       title: "Phone",
-      details: ["+234 (0) 123 456 7890", "WhatsApp Available"],
+      details: ["+2347015545783", "WhatsApp: +2349095803661"],
       action: "Call Now"
     },
     {
@@ -21,7 +21,7 @@ const ContactSection = () => {
     {
       icon: <MapPin className="w-6 h-6 text-spa-gold" />,
       title: "Location",
-      details: ["123 Admiralty Way", "Lekki Phase 1, Lagos"],
+      details: ["20 Dele Adeyemi Street", "Agungi East Estate"],
       action: "Get Directions"
     },
     {
