@@ -8,8 +8,6 @@ const SpecialOffersSection = () => {
     {
       icon: <Sparkles className="w-8 h-8 text-spa-gold" />,
       title: "New Client Special",
-      originalPrice: "₦25,000",
-      discountPrice: "₦18,000",
       discount: "30% OFF",
       description: "Perfect introduction package including consultation + choice of facial or body contouring session.",
       features: ["Free Consultation", "Choice of Service", "Skincare Sample Kit"],
@@ -19,8 +17,6 @@ const SpecialOffersSection = () => {
     {
       icon: <Users className="w-8 h-8 text-spa-gold" />,
       title: "Glow Club Membership",
-      originalPrice: "₦60,000/month",
-      discountPrice: "₦45,000/month",
       discount: "25% OFF",
       description: "Monthly membership with 3 facials + 2 body treatments. Perfect for regular self-care.",
       features: ["3 Facials Monthly", "2 Body Treatments", "Priority Booking", "Member Discounts"],
@@ -29,9 +25,7 @@ const SpecialOffersSection = () => {
     {
       icon: <Gift className="w-8 h-8 text-spa-gold" />,
       title: "Couples Spa Day",
-      originalPrice: "₦80,000",
-      discountPrice: "₦65,000",
-      discount: "Save ₦15K",
+      discount: "Special Offer",
       description: "Romantic spa experience for two. Includes side-by-side treatments and refreshments.",
       features: ["Couples Massage", "Facial for Two", "Champagne & Snacks", "Private Suite"],
       validUntil: "Perfect for anniversaries"
@@ -76,16 +70,8 @@ const SpecialOffersSection = () => {
                   {offer.title}
                 </h3>
 
-                {/* Pricing */}
+                {/* Service Info */}
                 <div className="mb-6">
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="text-3xl font-bold text-spa-sage">
-                      {offer.discountPrice}
-                    </span>
-                    <span className="text-lg text-spa-text-secondary line-through">
-                      {offer.originalPrice}
-                    </span>
-                  </div>
                   <p className="text-sm text-spa-text-secondary italic">
                     {offer.validUntil}
                   </p>
