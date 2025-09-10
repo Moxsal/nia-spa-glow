@@ -60,11 +60,35 @@ const ContactSection = () => {
                         <h3 className="font-semibold text-spa-text-primary mb-2">
                           {info.title}
                         </h3>
-                        {info.details.map((detail, detailIndex) => (
-                          <p key={detailIndex} className="text-spa-text-secondary">
-                            {detail}
-                          </p>
-                        ))}
+                        {info.details.map((detail, detailIndex) => {
+                          if (info.title === "Phone") {
+                            return (
+                              <a 
+                                key={detailIndex} 
+                                href={detail.includes("WhatsApp") ? `https://wa.me/${detail.replace(/\D/g, '')}` : `tel:${detail.replace(/\D/g, '')}`}
+                                className="block text-spa-text-secondary hover:text-spa-sage transition-spa-fast cursor-pointer"
+                              >
+                                {detail}
+                              </a>
+                            );
+                          } else if (info.title === "Email") {
+                            return (
+                              <a 
+                                key={detailIndex} 
+                                href={detail.includes("@") ? `mailto:${detail}` : "#"}
+                                className="block text-spa-text-secondary hover:text-spa-sage transition-spa-fast cursor-pointer"
+                              >
+                                {detail}
+                              </a>
+                            );
+                          } else {
+                            return (
+                              <p key={detailIndex} className="text-spa-text-secondary">
+                                {detail}
+                              </p>
+                            );
+                          }
+                        })}
                       </div>
                     </div>
                   </CardContent>
@@ -82,7 +106,10 @@ const ContactSection = () => {
                 <p className="text-spa-text-secondary mb-6">
                   Most Nigerians book via WhatsApp. Chat with us directly for instant booking!
                 </p>
-                <Button className="bg-green-600 hover:bg-green-700 text-white">
+                <Button 
+                  className="bg-green-600 hover:bg-green-700 text-white"
+                  onClick={() => window.open('https://wa.me/2349095803661', '_blank')}
+                >
                   Chat on WhatsApp
                 </Button>
               </CardContent>
@@ -158,7 +185,15 @@ const ContactSection = () => {
                     />
                   </div>
 
-                  <Button type="submit" size="lg" className="w-full bg-spa-gold hover:bg-spa-gold-light text-spa-text-primary font-semibold">
+                  <Button 
+                    type="submit" 
+                    size="lg" 
+                    className="w-full bg-spa-gold hover:bg-spa-gold-light text-spa-text-primary font-semibold"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      alert('Thank you! We will contact you within 2 hours to confirm your appointment.');
+                    }}
+                  >
                     Book My Appointment
                   </Button>
 

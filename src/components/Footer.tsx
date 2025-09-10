@@ -48,11 +48,15 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-2">
                 <Phone size={16} className="text-spa-gold flex-shrink-0" />
-                <span className="text-sm">+2347015545783</span>
+                <a href="tel:+2347015545783" className="text-sm hover:text-spa-gold transition-spa-fast">
+                  +2347015545783
+                </a>
               </li>
               <li className="flex items-center gap-2">
                 <Mail size={16} className="text-spa-gold flex-shrink-0" />
-                <span className="text-sm">hello@niaspa.com</span>
+                <a href="mailto:hello@niaspa.com" className="text-sm hover:text-spa-gold transition-spa-fast">
+                  hello@niaspa.com
+                </a>
               </li>
               <li className="flex items-center gap-2">
                 <Clock size={16} className="text-spa-gold flex-shrink-0" />

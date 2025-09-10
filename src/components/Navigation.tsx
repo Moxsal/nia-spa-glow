@@ -41,7 +41,11 @@ const Navigation = () => {
 
           {/* Book Now Button */}
           <div className="hidden md:block">
-            <Button variant="default" size="sm">
+            <Button 
+              variant="default" 
+              size="sm"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Book Now
             </Button>
           </div>
@@ -72,7 +76,15 @@ const Navigation = () => {
                 </a>
               ))}
               <div className="pt-4">
-                <Button variant="default" size="sm" className="w-full">
+                <Button 
+                  variant="default" 
+                  size="sm" 
+                  className="w-full"
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
                   Book Now
                 </Button>
               </div>

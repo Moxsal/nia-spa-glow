@@ -33,6 +33,7 @@ const HeroSection = () => {
             <Button 
               size="lg" 
               className="bg-spa-gold hover:bg-spa-gold-light text-spa-text-primary font-semibold px-8 py-6 text-lg shadow-spa-medium"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Book Your Session
             </Button>
@@ -40,6 +41,7 @@ const HeroSection = () => {
               variant="outline" 
               size="lg"
               className="border-spa-warm-white text-spa-warm-white hover:bg-spa-warm-white hover:text-spa-text-primary px-8 py-6 text-lg"
+              onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
             >
               View Services
             </Button>
@@ -47,13 +49,16 @@ const HeroSection = () => {
 
           {/* Quick Contact Info */}
           <div className="flex flex-col sm:flex-row gap-6 text-spa-cream">
-            <div className="flex items-center gap-2">
+            <a 
+              href="tel:+2347015545783" 
+              className="flex items-center gap-2 hover:text-spa-gold transition-spa-fast cursor-pointer"
+            >
               <Phone size={20} />
-              <span>+234 (0) 123 456 7890</span>
-            </div>
+              <span>+2347015545783</span>
+            </a>
             <div className="flex items-center gap-2">
               <MapPin size={20} />
-              <span>Lekki Phase 1, Lagos</span>
+              <span>20 Dele Adeyemi Street, Agungi East Estate</span>
             </div>
           </div>
         </div>

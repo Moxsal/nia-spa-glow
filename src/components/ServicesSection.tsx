@@ -79,7 +79,10 @@ const ServicesSection = () => {
                   {service.description}
                 </p>
 
-                <Button className="w-full bg-spa-gold hover:bg-spa-gold-light text-spa-text-primary font-semibold">
+                <Button 
+                  className="w-full bg-spa-gold hover:bg-spa-gold-light text-spa-text-primary font-semibold"
+                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                >
                   Book Now
                 </Button>
               </CardContent>
@@ -91,7 +94,11 @@ const ServicesSection = () => {
           <p className="text-spa-text-secondary mb-6">
             Need a customized treatment plan? Our experts are here to help.
           </p>
-          <Button size="lg" className="bg-spa-gold hover:bg-spa-gold-light text-spa-text-primary font-semibold">
+          <Button 
+            size="lg" 
+            className="bg-spa-gold hover:bg-spa-gold-light text-spa-text-primary font-semibold"
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+          >
             Schedule Consultation
           </Button>
         </div>
