@@ -17,7 +17,7 @@ All colors MUST be HSL.
     --popover: 30 25% 97%;
     --popover-foreground: 150 15% 20%;
 
-    --primary: 340 45% 55%;
+    --primary: 330 65% 65%;
     --primary-foreground: 30 25% 97%;
 
     --secondary: 40 35% 85%;
@@ -34,20 +34,20 @@ All colors MUST be HSL.
 
     --border: 40 20% 88%;
     --input: 40 20% 90%;
-    --ring: 340 45% 55%;
+    --ring: 330 65% 65%;
 
     --radius: 0.75rem;
 
     /* Spa-specific design tokens - Pink theme */
-    --spa-sage: 340 45% 65%;
-    --spa-sage-light: 340 35% 85%;
-    --spa-sage-dark: 340 55% 25%;
+    --spa-sage: 330 65% 65%;
+    --spa-sage-light: 330 55% 85%;
+    --spa-sage-dark: 330 45% 25%;
     --spa-cream: 40 30% 95%;
-    --spa-gold: 45 85% 65%;
-    --spa-gold-light: 45 70% 85%;
+    --spa-gold: 330 75% 65%;
+    --spa-gold-light: 330 65% 80%;
     --spa-warm-white: 30 20% 98%;
-    --spa-text-primary: 340 25% 20%;
-    --spa-text-secondary: 340 15% 45%;
+    --spa-text-primary: 330 25% 20%;
+    --spa-text-secondary: 330 15% 45%;
 
     /* Gradients */
     --gradient-spa-hero: linear-gradient(135deg, hsl(var(--spa-sage-light)), hsl(var(--spa-cream)));

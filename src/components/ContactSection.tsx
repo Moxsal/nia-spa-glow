@@ -15,7 +15,7 @@ const ContactSection = () => {
     {
       icon: <Mail className="w-6 h-6 text-spa-gold" />,
       title: "Email",
-      details: ["hello@niaspa.com", "Quick Response"],
+      details: ["Gina@nia-spa.com", "Quick Response"],
       action: "Send Email"
     },
     {
@@ -75,7 +75,7 @@ const ContactSection = () => {
                             return (
                               <a 
                                 key={detailIndex} 
-                                href={detail.includes("@") ? `mailto:${detail}` : "#"}
+                                href={detail.includes("@") ? `mailto:${detail}` : undefined}
                                 className="block text-spa-text-secondary hover:text-spa-sage transition-spa-fast cursor-pointer"
                               >
                                 {detail}
