@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
@@ -6,11 +7,13 @@ const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Services", href: "#services" },
-    { name: "Gallery", href: "#gallery" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Services", href: "/services" },
+    { name: "Gallery", href: "/gallery" },
+    { name: "Testimonials", href: "/testimonials" },
+    { name: "Blog", href: "/blog" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
@@ -18,36 +21,37 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex-shrink-0">
+          <Link to="/" className="flex-shrink-0">
             <h1 className="text-2xl font-bold text-spa-text-primary">
               Nia Spa Aesthetics
             </h1>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.name}
-                  href={item.href}
+                  to={item.href}
                   className="text-spa-text-primary hover:text-spa-sage px-3 py-2 text-sm font-medium transition-spa-fast"
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
 
           {/* Book Now Button */}
           <div className="hidden md:block">
-            <Button 
-              variant="default" 
-              size="sm"
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Book Now
-            </Button>
+            <Link to="/contact">
+              <Button 
+                variant="default" 
+                size="sm"
+              >
+                Book Now
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -66,27 +70,26 @@ const Navigation = () => {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-spa-warm-white border-t border-spa-sage-light/20">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.name}
-                  href={item.href}
+                  to={item.href}
                   className="text-spa-text-primary hover:text-spa-sage block px-3 py-2 text-base font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
               <div className="pt-4">
-                <Button 
-                  variant="default" 
-                  size="sm" 
-                  className="w-full"
-                  onClick={() => {
-                    setIsMenuOpen(false);
-                    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                >
-                  Book Now
-                </Button>
+                <Link to="/contact" className="block">
+                  <Button 
+                    variant="default" 
+                    size="sm" 
+                    className="w-full"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Book Now
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

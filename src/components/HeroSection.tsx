@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { Phone, MapPin } from "lucide-react";
 import heroImage from "@/assets/spa-hero.jpg";
 
@@ -30,21 +31,23 @@ const HeroSection = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-8">
-            <Button 
-              size="lg" 
-              className="bg-spa-gold hover:bg-spa-gold-light text-spa-text-primary font-semibold px-8 py-6 text-lg shadow-spa-medium"
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Book Your Session
-            </Button>
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="border-spa-warm-white text-spa-warm-white hover:bg-spa-warm-white hover:text-spa-text-primary px-8 py-6 text-lg"
-              onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              View Services
-            </Button>
+            <Link to="/contact">
+              <Button 
+                size="lg" 
+                className="bg-spa-gold hover:bg-spa-gold-light text-spa-text-primary font-semibold px-8 py-6 text-lg shadow-spa-medium"
+              >
+                Book Your Session
+              </Button>
+            </Link>
+            <Link to="/services">
+              <Button 
+                variant="outline" 
+                size="lg"
+                className="border-spa-warm-white text-spa-warm-white hover:bg-spa-warm-white hover:text-spa-text-primary px-8 py-6 text-lg"
+              >
+                View Services
+              </Button>
+            </Link>
           </div>
 
           {/* Quick Contact Info */}

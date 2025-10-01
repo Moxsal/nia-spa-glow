@@ -1,5 +1,6 @@
-import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { Card, CardContent } from "@/components/ui/card";
 import { Sparkles, Heart, Zap, Sun, Flower2, Droplets, Moon, Leaf } from "lucide-react";
 
 const ServicesSection = () => {
@@ -81,9 +82,9 @@ const ServicesSection = () => {
 
                 <Button 
                   className="w-full bg-spa-gold hover:bg-spa-gold-light text-spa-text-primary font-semibold"
-                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                  asChild
                 >
-                  Book Now
+                  <Link to="/contact">Book Now</Link>
                 </Button>
               </CardContent>
             </Card>
@@ -94,13 +95,14 @@ const ServicesSection = () => {
           <p className="text-spa-text-secondary mb-6">
             Need a customized treatment plan? Our experts are here to help.
           </p>
-          <Button 
-            size="lg" 
-            className="bg-spa-gold hover:bg-spa-gold-light text-spa-text-primary font-semibold"
-            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-          >
-            Schedule Consultation
-          </Button>
+          <Link to="/contact">
+            <Button 
+              size="lg" 
+              className="bg-spa-gold hover:bg-spa-gold-light text-spa-text-primary font-semibold"
+            >
+              Schedule Consultation
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

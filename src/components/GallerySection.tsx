@@ -1,13 +1,16 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import treatmentRoomPetals from "@/assets/treatment-room-petals.jpg";
 import massageTable from "@/assets/massage-table.jpg";
 import treatmentRoomWide from "@/assets/treatment-room-wide.jpg";
 import spaProductsTray from "@/assets/spa-products-tray.jpg";
 import spaProductsShelf from "@/assets/spa-products-shelf.jpg";
-import facialTreatment from "@/assets/facial-treatment.jpg";
-import spaReception from "@/assets/spa-reception.jpg";
-import relaxationLounge from "@/assets/relaxation-lounge.jpg";
+import facialTreatment from "@/assets/facial-treatment-ng.jpg";
+import spaReception from "@/assets/spa-reception-ng.jpg";
+import relaxationLounge from "@/assets/relaxation-lounge-ng.jpg";
+import manicureStation from "@/assets/manicure-station-ng.jpg";
+import bodyContouring from "@/assets/body-contouring-ng.jpg";
 
 const GallerySection = () => {
   const galleryItems = [
@@ -37,9 +40,19 @@ const GallerySection = () => {
       description: "Only the best for your skin and wellness"
     },
     {
+      image: manicureStation,
+      title: "Professional Manicure & Pedicure",
+      description: "Elegant nail care in a luxurious Nigerian spa setting"
+    },
+    {
       image: facialTreatment,
       title: "Facial & Skincare Treatments",
       description: "Advanced facial therapies for radiant skin"
+    },
+    {
+      image: bodyContouring,
+      title: "Body Contouring Services",
+      description: "Modern body sculpting treatments in Lagos"
     },
     {
       image: spaReception,
@@ -88,13 +101,14 @@ const GallerySection = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button 
-            size="lg" 
-            className="bg-spa-gold hover:bg-spa-gold-light text-spa-text-primary font-semibold"
-            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-          >
-            Book Your Visit
-          </Button>
+          <Link to="/contact">
+            <Button 
+              size="lg" 
+              className="bg-spa-gold hover:bg-spa-gold-light text-spa-text-primary font-semibold"
+            >
+              Book Your Visit
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

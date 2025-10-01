@@ -1,4 +1,5 @@
 import { MapPin, Phone, Mail, Instagram, Facebook, Clock } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -30,11 +31,11 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-spa-warm-white mb-4">Our Services</h4>
             <ul className="space-y-2 text-spa-cream/80">
-              <li><a href="#services" className="hover:text-spa-gold transition-spa-fast">Manicure & Pedicure</a></li>
-              <li><a href="#services" className="hover:text-spa-gold transition-spa-fast">Body Contouring</a></li>
-              <li><a href="#services" className="hover:text-spa-gold transition-spa-fast">Botox Services</a></li>
-              <li><a href="#services" className="hover:text-spa-gold transition-spa-fast">Hyperpigmentation</a></li>
-              <li><a href="#contact" className="hover:text-spa-gold transition-spa-fast">Consultation</a></li>
+              <li><Link to="/services" className="hover:text-spa-gold transition-spa-fast">Manicure & Pedicure</Link></li>
+              <li><Link to="/services" className="hover:text-spa-gold transition-spa-fast">Body Contouring</Link></li>
+              <li><Link to="/services" className="hover:text-spa-gold transition-spa-fast">Botox Services</Link></li>
+              <li><Link to="/services" className="hover:text-spa-gold transition-spa-fast">Hyperpigmentation</Link></li>
+              <li><Link to="/contact" className="hover:text-spa-gold transition-spa-fast">Consultation</Link></li>
             </ul>
           </div>
 
