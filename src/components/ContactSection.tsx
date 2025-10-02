@@ -96,15 +96,15 @@ const ContactSection = () => {
               ))}
             </div>
 
-            {/* WhatsApp CTA */}
+            {/* WhatsApp CTA - Separate Card */}
             <Card className="bg-[#25D366]/10 border-[#25D366]/30 shadow-spa-medium hover:shadow-spa-strong transition-spa">
               <CardContent className="p-8 text-center">
                 <MessageCircle className="w-12 h-12 text-[#25D366] mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-spa-text-primary mb-2">
-                  Quick Booking and Inquiries
+                  Quick booking and inquiries
                 </h3>
                 <p className="text-spa-text-secondary mb-6">
-                  Most Nigerians book via WhatsApp. Chat with us directly for instant booking!
+                  Chat with us directly on WhatsApp for instant booking and answers to your questions!
                 </p>
                 <a 
                   href="https://wa.me/2349095803661" 
@@ -113,33 +113,35 @@ const ContactSection = () => {
                   className="inline-block w-full"
                 >
                   <Button 
-                    className="bg-[#25D366] hover:bg-[#20BA5A] text-white w-full"
+                    className="bg-[#25D366] hover:bg-[#20BA5A] text-white w-full font-semibold"
                   >
-                    <MessageCircle className="w-4 h-4 mr-2" />
-                    Chat on WhatsApp
+                    <MessageCircle className="w-5 h-5 mr-2" />
+                    Quick Booking and Inquiries
                   </Button>
                 </a>
               </CardContent>
             </Card>
 
-            {/* Call CTA */}
+            {/* Call CTA - Separate Card */}
             <Card className="bg-spa-gold/10 border-spa-gold/30 shadow-spa-medium hover:shadow-spa-strong transition-spa mt-6">
               <CardContent className="p-8 text-center">
                 <Phone className="w-12 h-12 text-spa-gold mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-spa-text-primary mb-2">
-                  Speak Direct with Our Booking Team
+                  Speak direct with our booking team
                 </h3>
                 <p className="text-spa-text-secondary mb-6">
-                  Prefer to call? Our friendly team is ready to assist you.
+                  Prefer to speak with someone? Call our friendly booking team now.
                 </p>
                 <a 
                   href="tel:+2347015545783"
                   className="inline-block w-full"
                 >
                   <Button 
-                    className="bg-spa-gold hover:bg-spa-gold/90 text-spa-text-primary w-full"
+                    variant="pink"
+                    size="lg"
+                    className="w-full font-semibold"
                   >
-                    <Phone className="w-4 h-4 mr-2" />
+                    <Phone className="w-5 h-5 mr-2" />
                     Call +234 701 554 5783
                   </Button>
                 </a>

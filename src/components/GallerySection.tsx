@@ -1,68 +1,50 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import treatmentRoomPetals from "@/assets/treatment-room-petals.jpg";
-import massageTable from "@/assets/massage-table.jpg";
-import treatmentRoomWide from "@/assets/treatment-room-wide.jpg";
-import spaProductsTray from "@/assets/spa-products-tray.jpg";
-import spaProductsShelf from "@/assets/spa-products-shelf.jpg";
-import facialTreatment from "@/assets/facial-treatment-ng.jpg";
-import spaReception from "@/assets/spa-reception-ng.jpg";
-import relaxationLounge from "@/assets/relaxation-lounge-ng.jpg";
-import manicureStation from "@/assets/manicure-station-ng.jpg";
-import bodyContouring from "@/assets/body-contouring-ng.jpg";
+import heroMassageTable from "@/assets/hero-massage-table.jpg";
+import treatmentRoomFacial from "@/assets/treatment-room-facial.jpg";
+import treatmentRoomFacialAlt from "@/assets/treatment-room-facial-alt.jpg";
+import treatmentRoomFull from "@/assets/treatment-room-full.jpg";
+import spaTowelsCandles from "@/assets/spa-towels-candles.jpg";
+import spaProductsGoldBowl from "@/assets/spa-products-gold-bowl.jpg";
+import spaProductsFlowers from "@/assets/spa-products-flowers.jpg";
 
 const GallerySection = () => {
   const galleryItems = [
     {
-      image: treatmentRoomPetals,
-      title: "Luxurious Treatment Room",
-      description: "Experience tranquility in our beautifully designed treatment spaces"
+      image: heroMassageTable,
+      title: "Hot Stone Massage Therapy",
+      description: "Indulge in our signature hot stone massage with aromatherapy oils and rose petals"
     },
     {
-      image: massageTable,
-      title: "Professional Massage & Body Therapy",
-      description: "State-of-the-art equipment for your ultimate comfort"
+      image: treatmentRoomFacial,
+      title: "Facial Treatment Room",
+      description: "Advanced facial treatments with professional steamer equipment"
     },
     {
-      image: treatmentRoomWide,
-      title: "Modern Spa Facilities",
-      description: "Contemporary design meets traditional wellness"
+      image: treatmentRoomFacialAlt,
+      title: "Professional Skincare Station",
+      description: "State-of-the-art equipment for your ultimate facial experience"
     },
     {
-      image: spaProductsTray,
-      title: "Premium Product Collection",
-      description: "Carefully curated skincare and beauty products"
+      image: treatmentRoomFull,
+      title: "Complete Treatment Suite",
+      description: "Fully equipped treatment room with modern spa technology"
     },
     {
-      image: spaProductsShelf,
-      title: "Quality Spa Essentials",
-      description: "Only the best for your skin and wellness"
+      image: spaTowelsCandles,
+      title: "Relaxation & Ambiance",
+      description: "Premium spa towels and aromatic candles for your comfort"
     },
     {
-      image: manicureStation,
-      title: "Professional Manicure & Pedicure",
-      description: "Elegant nail care in a luxurious Nigerian spa setting"
+      image: spaProductsGoldBowl,
+      title: "Luxury Spa Products",
+      description: "Carefully selected massage oils, hot stones, and wellness tools"
     },
     {
-      image: facialTreatment,
-      title: "Facial & Skincare Treatments",
-      description: "Advanced facial therapies for radiant skin"
-    },
-    {
-      image: bodyContouring,
-      title: "Body Contouring Services",
-      description: "Modern body sculpting treatments in Lagos"
-    },
-    {
-      image: spaReception,
-      title: "Welcoming Spa Environment",
-      description: "Your journey to wellness begins here"
-    },
-    {
-      image: relaxationLounge,
-      title: "Relaxation Lounge",
-      description: "Unwind in our peaceful sanctuary"
+      image: spaProductsFlowers,
+      title: "Premium Wellness Collection",
+      description: "Gold bowl treatments with fresh flowers and essential oils"
     }
   ];
 

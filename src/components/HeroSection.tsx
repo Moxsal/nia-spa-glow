@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Phone, MapPin } from "lucide-react";
-import heroImage from "@/assets/spa-hero.jpg";
+import heroImage from "@/assets/hero-massage-table.jpg";
 
 const HeroSection = () => {
   return (
@@ -10,7 +10,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 z-0">
         <img 
           src={heroImage} 
-          alt="Luxurious spa interior at Nia Spa Aesthetics"
+          alt="Luxurious Nia Spa Aesthetics massage treatment with hot stones and aromatherapy in Lagos Nigeria"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-spa-sage-dark/40"></div>
