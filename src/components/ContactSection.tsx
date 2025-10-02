@@ -3,34 +3,82 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
+import { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
 
 const ContactSection = () => {
+  const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    phone: "",
+    email: "",
+    service: "",
+    date: "",
+    time: "",
+    message: ""
+  });
+
   const contactInfo = [
     {
       icon: <Phone className="w-6 h-6 text-spa-gold" />,
-      title: "Phone",
-      details: ["+2347015545783", "WhatsApp: +2349095803661"],
-      action: "Call Now"
+      title: "Call",
+      details: ["+2347015545783", "Speak direct with our booking team"],
+      link: "tel:+2347015545783"
+    },
+    {
+      icon: <MessageCircle className="w-6 h-6 text-spa-gold" />,
+      title: "WhatsApp",
+      details: ["+2349095803661", "Quick booking and inquiries"],
+      link: "https://wa.me/2349095803661"
     },
     {
       icon: <Mail className="w-6 h-6 text-spa-gold" />,
       title: "Email",
       details: ["Gina@nia-spa.com", "Quick Response"],
-      action: "Send Email"
+      link: "mailto:Gina@nia-spa.com"
     },
     {
       icon: <MapPin className="w-6 h-6 text-spa-gold" />,
       title: "Location",
       details: ["20 Dele Adeyemi Street", "Agungi East Estate"],
-      action: "Get Directions"
+      link: null
     },
     {
       icon: <Clock className="w-6 h-6 text-spa-gold" />,
       title: "Hours",
       details: ["Mon-Sat: 9AM-7PM", "Sun: 11AM-5PM"],
-      action: "View Schedule"
+      link: null
     }
   ];
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    const fullName = `${formData.firstName} ${formData.lastName}`.trim();
+    const whatsappMessage = `New Booking Request:%0A%0AName: ${encodeURIComponent(fullName)}%0APhone: ${encodeURIComponent(formData.phone)}%0AEmail: ${encodeURIComponent(formData.email)}%0AService: ${encodeURIComponent(formData.service)}%0ADate: ${encodeURIComponent(formData.date)}%0ATime: ${encodeURIComponent(formData.time)}%0AMessage: ${encodeURIComponent(formData.message)}`;
+    
+    const whatsappUrl = `https://wa.me/2349095803661?text=${whatsappMessage}`;
+    
+    toast({
+      title: "✅ Booking Request Sent!",
+      description: "Your booking request has been sent successfully via WhatsApp. Our team will respond shortly.",
+    });
+    
+    window.open(whatsappUrl, '_blank');
+    
+    // Reset form
+    setFormData({
+      firstName: "",
+      lastName: "",
+      phone: "",
+      email: "",
+      service: "",
+      date: "",
+      time: "",
+      message: ""
+    });
+  };
 
   return (
     <section id="contact" className="py-20 bg-spa-warm-white">
@@ -48,7 +96,7 @@ const ContactSection = () => {
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Contact Information */}
           <div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6 mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
               {contactInfo.map((info, index) => (
                 <Card key={index} className="bg-spa-card border-spa-sage-light/20 shadow-spa-soft hover:shadow-spa-medium transition-spa">
                   <CardContent className="p-6">
@@ -61,22 +109,14 @@ const ContactSection = () => {
                           {info.title}
                         </h3>
                         {info.details.map((detail, detailIndex) => {
-                          if (info.title === "Phone") {
+                          if (info.link && detailIndex === 0) {
                             return (
                               <a 
                                 key={detailIndex} 
-                                href={detail.includes("WhatsApp") ? `https://wa.me/${detail.replace(/\D/g, '')}` : `tel:${detail.replace(/\D/g, '')}`}
-                                className="block text-spa-text-secondary hover:text-spa-sage transition-spa-fast cursor-pointer"
-                              >
-                                {detail}
-                              </a>
-                            );
-                          } else if (info.title === "Email") {
-                            return (
-                              <a 
-                                key={detailIndex} 
-                                href={detail.includes("@") ? `mailto:${detail}` : undefined}
-                                className="block text-spa-text-secondary hover:text-spa-sage transition-spa-fast cursor-pointer"
+                                href={info.link}
+                                target={info.link.startsWith('http') ? '_blank' : undefined}
+                                rel={info.link.startsWith('http') ? 'noopener noreferrer' : undefined}
+                                className="block text-spa-text-secondary hover:text-spa-sage transition-spa-fast cursor-pointer font-medium"
                               >
                                 {detail}
                               </a>
@@ -95,58 +135,6 @@ const ContactSection = () => {
                 </Card>
               ))}
             </div>
-
-            {/* WhatsApp CTA - Separate Card */}
-            <Card className="bg-[#25D366]/10 border-[#25D366]/30 shadow-spa-medium hover:shadow-spa-strong transition-spa">
-              <CardContent className="p-8 text-center">
-                <MessageCircle className="w-12 h-12 text-[#25D366] mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-spa-text-primary mb-2">
-                  Quick booking and inquiries
-                </h3>
-                <p className="text-spa-text-secondary mb-6">
-                  Chat with us directly on WhatsApp for instant booking and answers to your questions!
-                </p>
-                <a 
-                  href="https://wa.me/2349095803661" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-block w-full"
-                >
-                  <Button 
-                    className="bg-[#25D366] hover:bg-[#20BA5A] text-white w-full font-semibold"
-                  >
-                    <MessageCircle className="w-5 h-5 mr-2" />
-                    Quick Booking and Inquiries
-                  </Button>
-                </a>
-              </CardContent>
-            </Card>
-
-            {/* Call CTA - Separate Card */}
-            <Card className="bg-spa-gold/10 border-spa-gold/30 shadow-spa-medium hover:shadow-spa-strong transition-spa mt-6">
-              <CardContent className="p-8 text-center">
-                <Phone className="w-12 h-12 text-spa-gold mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-spa-text-primary mb-2">
-                  Speak direct with our booking team
-                </h3>
-                <p className="text-spa-text-secondary mb-6">
-                  Prefer to speak with someone? Call our friendly booking team now.
-                </p>
-                <a 
-                  href="tel:+2347015545783"
-                  className="inline-block w-full"
-                >
-                  <Button 
-                    variant="pink"
-                    size="lg"
-                    className="w-full font-semibold"
-                  >
-                    <Phone className="w-5 h-5 mr-2" />
-                    Call +234 701 554 5783
-                  </Button>
-                </a>
-              </CardContent>
-            </Card>
           </div>
 
           {/* Booking Form */}
@@ -157,19 +145,31 @@ const ContactSection = () => {
                   Book Your Appointment
                 </h3>
                 
-                <form className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-medium text-spa-text-primary mb-2">
                         First Name
                       </label>
-                      <Input placeholder="Enter your first name" className="border-spa-sage-light/30" />
+                      <Input 
+                        placeholder="Enter your first name" 
+                        className="border-spa-sage-light/30"
+                        value={formData.firstName}
+                        onChange={(e) => setFormData({...formData, firstName: e.target.value})}
+                        required
+                      />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-spa-text-primary mb-2">
                         Last Name
                       </label>
-                      <Input placeholder="Enter your last name" className="border-spa-sage-light/30" />
+                      <Input 
+                        placeholder="Enter your last name" 
+                        className="border-spa-sage-light/30"
+                        value={formData.lastName}
+                        onChange={(e) => setFormData({...formData, lastName: e.target.value})}
+                        required
+                      />
                     </div>
                   </div>
 
@@ -177,35 +177,74 @@ const ContactSection = () => {
                     <label className="block text-sm font-medium text-spa-text-primary mb-2">
                       Phone Number
                     </label>
-                    <Input type="tel" placeholder="+234 (0) 123 456 7890" className="border-spa-sage-light/30" />
+                    <Input 
+                      type="tel" 
+                      placeholder="+234 (0) 123 456 7890" 
+                      className="border-spa-sage-light/30"
+                      value={formData.phone}
+                      onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                      required
+                    />
                   </div>
 
                   <div>
                     <label className="block text-sm font-medium text-spa-text-primary mb-2">
                       Email Address
                     </label>
-                    <Input type="email" placeholder="your.email@example.com" className="border-spa-sage-light/30" />
+                    <Input 
+                      type="email" 
+                      placeholder="your.email@example.com" 
+                      className="border-spa-sage-light/30"
+                      value={formData.email}
+                      onChange={(e) => setFormData({...formData, email: e.target.value})}
+                      required
+                    />
                   </div>
 
                   <div>
                     <label className="block text-sm font-medium text-spa-text-primary mb-2">
                       Service Needed
                     </label>
-                    <select className="w-full p-3 border border-spa-sage-light/30 rounded-lg bg-spa-warm-white text-spa-text-primary">
+                    <select 
+                      className="w-full p-3 border border-spa-sage-light/30 rounded-lg bg-spa-warm-white text-spa-text-primary"
+                      value={formData.service}
+                      onChange={(e) => setFormData({...formData, service: e.target.value})}
+                      required
+                    >
                       <option value="">Select a service</option>
-                      <option value="manicure-pedicure">Manicure & Pedicure</option>
-                      <option value="body-contouring">Body Contouring</option>
-                      <option value="botox">Botox Services</option>
-                      <option value="hyperpigmentation">Hyperpigmentation Treatment</option>
-                      <option value="consultation">Consultation</option>
+                      <option value="Manicure & Pedicure">Manicure & Pedicure</option>
+                      <option value="Body Contouring">Body Contouring</option>
+                      <option value="Botox Services">Botox Services</option>
+                      <option value="Hyperpigmentation Treatment">Hyperpigmentation Treatment</option>
+                      <option value="Consultation">Consultation</option>
                     </select>
                   </div>
 
-                  <div>
-                    <label className="block text-sm font-medium text-spa-text-primary mb-2">
-                      Preferred Date & Time
-                    </label>
-                    <Input type="datetime-local" className="border-spa-sage-light/30" />
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-medium text-spa-text-primary mb-2">
+                        Preferred Date
+                      </label>
+                      <Input 
+                        type="date" 
+                        className="border-spa-sage-light/30"
+                        value={formData.date}
+                        onChange={(e) => setFormData({...formData, date: e.target.value})}
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-spa-text-primary mb-2">
+                        Preferred Time
+                      </label>
+                      <Input 
+                        type="time" 
+                        className="border-spa-sage-light/30"
+                        value={formData.time}
+                        onChange={(e) => setFormData({...formData, time: e.target.value})}
+                        required
+                      />
+                    </div>
                   </div>
 
                   <div>
@@ -215,17 +254,16 @@ const ContactSection = () => {
                     <Textarea 
                       placeholder="Tell us about any specific concerns or preferences..."
                       className="border-spa-sage-light/30 min-h-[100px]"
+                      value={formData.message}
+                      onChange={(e) => setFormData({...formData, message: e.target.value})}
                     />
                   </div>
 
                   <Button 
                     type="submit" 
+                    variant="pink"
                     size="lg" 
-                    className="w-full bg-spa-gold hover:bg-spa-gold-light text-spa-text-primary font-semibold"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      alert('Thank you! We will contact you within 2 hours to confirm your appointment.');
-                    }}
+                    className="w-full font-semibold"
                   >
                     Book My Appointment
                   </Button>
