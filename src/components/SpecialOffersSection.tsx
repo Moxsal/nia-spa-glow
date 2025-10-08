@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Gift, Users, Sparkles, Calendar } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const SpecialOffersSection = () => {
   const offers = [
@@ -102,8 +103,9 @@ const SpecialOffersSection = () => {
                     : 'bg-spa-sage hover:bg-spa-sage-light text-spa-warm-white'
                   }`}
                   size="lg"
+                  asChild
                 >
-                  Claim This Offer
+                  <Link to="/contact">Claim This Offer</Link>
                 </Button>
               </CardContent>
             </Card>
@@ -121,8 +123,8 @@ const SpecialOffersSection = () => {
               These offers are limited time only. Don't miss out on experiencing luxury 
               wellness at unbeatable prices.
             </p>
-            <Button size="lg" className="bg-spa-gold hover:bg-spa-gold-light text-spa-text-primary font-semibold">
-              Book Now & Save
+            <Button size="lg" className="bg-spa-gold hover:bg-spa-gold-light text-spa-text-primary font-semibold" asChild>
+              <Link to="/contact">Book Now & Save</Link>
             </Button>
           </div>
         </div>
