@@ -63,7 +63,7 @@ const AboutSection = () => {
                 <div className="text-sm text-spa-text-secondary">Happy Clients</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-spa-sage mb-2">3+</div>
+                <div className="text-3xl font-bold text-spa-sage mb-2">6+</div>
                 <div className="text-sm text-spa-text-secondary">Years Experience</div>
               </div>
               <div className="text-center">

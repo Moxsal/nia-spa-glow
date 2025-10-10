@@ -46,6 +46,41 @@ const ServicesSection = () => {
       title: "Relaxation & Wellness Rituals",
       description: "From soothing massages to calming spa therapies, our wellness rituals melt away stress and leave your body, mind, and soul restored.",
       tagline: "Complete mind, body, and soul restoration"
+    },
+    {
+      icon: <Zap className="w-8 h-8 text-spa-gold" />,
+      title: "Botox (100 units)",
+      description: "Premium anti-aging treatment to smooth wrinkles and fine lines with precision. Achieve natural-looking, youthful results.",
+      tagline: "Expert precision, lasting results",
+      price: "₦250,000"
+    },
+    {
+      icon: <Droplets className="w-8 h-8 text-spa-gold" />,
+      title: "Advanced Chemical Peel",
+      description: "Professional-grade exfoliation that removes dead skin, reduces pigmentation, and reveals smoother, brighter skin.",
+      tagline: "Transform your skin texture",
+      price: "₦120,000"
+    },
+    {
+      icon: <Sparkles className="w-8 h-8 text-spa-gold" />,
+      title: "Full Body Waxing",
+      description: "Complete hair removal for silky-smooth skin from head to toe. Professional technique ensures comfort and lasting results.",
+      tagline: "Smooth, confident skin",
+      price: "₦60,000"
+    },
+    {
+      icon: <Heart className="w-8 h-8 text-spa-gold" />,
+      title: "Deep Tissue Massage",
+      description: "Therapeutic massage targeting deep muscle layers to release tension, relieve chronic pain, and promote healing.",
+      tagline: "Relief from deep within",
+      price: "₦40,000"
+    },
+    {
+      icon: <Sun className="w-8 h-8 text-spa-gold" />,
+      title: "Brightening Facial",
+      description: "Specialized treatment to even skin tone, reduce dark spots, and enhance your natural radiance for a glowing complexion.",
+      tagline: "Reveal your inner glow",
+      price: "₦35,000"
     }
   ];
 
@@ -76,9 +111,17 @@ const ServicesSection = () => {
                   {service.title}
                 </h3>
 
-                <p className="text-spa-text-secondary mb-8 leading-relaxed">
+                <p className="text-spa-text-secondary mb-4 leading-relaxed">
                   {service.description}
                 </p>
+
+                {service.price && (
+                  <div className="mb-6">
+                    <span className="inline-block px-4 py-2 bg-spa-gold-light text-spa-text-primary font-bold text-xl rounded-lg">
+                      {service.price}
+                    </span>
+                  </div>
+                )}
 
                 <Button 
                   className="w-full bg-spa-gold hover:bg-spa-gold-light text-spa-text-primary font-semibold"
