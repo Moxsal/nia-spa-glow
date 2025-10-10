@@ -9,43 +9,50 @@ const ServicesSection = () => {
       icon: <Sparkles className="w-8 h-8 text-spa-gold" />,
       title: "Manicure & Pedicure",
       description: "Give your hands and feet the care they deserve. We combine cleansing, exfoliation, and nail perfection to leave you polished, refreshed, and glowing.",
-      tagline: "Perfect for polished elegance year-round"
+      tagline: "Perfect for polished elegance year-round",
+      price: "₦150,000"
     },
     {
       icon: <Flower2 className="w-8 h-8 text-spa-gold" />,
       title: "Facials & Skin Rejuvenation",
       description: "Tailored to your skin's needs, our facials deeply hydrate, brighten, and refresh — helping you achieve a natural, radiant glow.",
-      tagline: "Perfect for glowing skin year-round"
+      tagline: "Perfect for glowing skin year-round",
+      price: "₦50,000"
     },
     {
       icon: <Heart className="w-8 h-8 text-spa-gold" />,
       title: "Body Contouring",
       description: "Sculpt and redefine your body with safe, non-invasive treatments that smooth and tone your natural curves. Confidence, reimagined.",
-      tagline: "Your confidence, redefined"
+      tagline: "Your confidence, redefined",
+      price: "₦150,000"
     },
     {
       icon: <Sun className="w-8 h-8 text-spa-gold" />,
       title: "Hyperpigmentation Treatment",
       description: "Target dark spots and uneven skin tone with customized therapies that restore brightness and promote a balanced complexion.",
-      tagline: "Gentle, safe, and effective"
+      tagline: "Gentle, safe, and effective",
+      price: "₦160,000"
     },
     {
       icon: <Droplets className="w-8 h-8 text-spa-gold" />,
       title: "Chemical Peels",
       description: "Unveil smooth, youthful-looking skin. Our gentle peels remove impurities and stimulate renewal for a fresh, revitalized glow.",
-      tagline: "Professional-grade renewal treatments"
+      tagline: "Professional-grade renewal treatments",
+      price: "₦120,000"
     },
     {
       icon: <Zap className="w-8 h-8 text-spa-gold" />,
       title: "Botox & Anti-Aging Care",
       description: "Soften fine lines and refresh your look with expert Botox treatments that enhance your natural beauty while keeping results subtle and refined.",
-      tagline: "Natural results, expert precision"
+      tagline: "Natural results, expert precision",
+      price: "₦250,000"
     },
     {
       icon: <Moon className="w-8 h-8 text-spa-gold" />,
       title: "Relaxation & Wellness Rituals",
       description: "From soothing massages to calming spa therapies, our wellness rituals melt away stress and leave your body, mind, and soul restored.",
-      tagline: "Complete mind, body, and soul restoration"
+      tagline: "Complete mind, body, and soul restoration",
+      price: "₦60,000"
     },
     {
       icon: <Zap className="w-8 h-8 text-spa-gold" />,
