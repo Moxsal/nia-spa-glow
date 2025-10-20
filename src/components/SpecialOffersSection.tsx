@@ -10,7 +10,7 @@ const SpecialOffersSection = () => {
       icon: <Sparkles className="w-8 h-8 text-spa-gold" />,
       title: "New Client Special",
       discount: "30% OFF",
-      description: "Perfect introduction package including consultation + choice of facial or body contouring session.",
+      description: "Perfect introduction package including consultation + choice of facial session.",
       features: ["Free Consultation", "Choice of Service", "Skincare Sample Kit"],
       validUntil: "Valid until end of month",
       popular: true
@@ -28,7 +28,7 @@ const SpecialOffersSection = () => {
       title: "Couples Spa Day",
       discount: "Special Offer",
       description: "Romantic spa experience for two. Includes side-by-side treatments and refreshments.",
-      features: ["Couples Massage", "Facial for Two", "Champagne & Snacks", "Private Suite"],
+      features: ["Couples Massage", "Facial for Two", "Champagne & Snacks"],
       validUntil: "Perfect for anniversaries"
     }
   ];

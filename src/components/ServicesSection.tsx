@@ -6,25 +6,11 @@ import { Sparkles, Heart, Zap, Sun, Flower2, Droplets, Moon, Leaf } from "lucide
 const ServicesSection = () => {
   const services = [
     {
-      icon: <Sparkles className="w-8 h-8 text-spa-gold" />,
-      title: "Manicure & Pedicure",
-      description: "Give your hands and feet the care they deserve. We combine cleansing, exfoliation, and nail perfection to leave you polished, refreshed, and glowing.",
-      tagline: "Perfect for polished elegance year-round",
-      price: "₦150,000"
-    },
-    {
-      icon: <Flower2 className="w-8 h-8 text-spa-gold" />,
-      title: "Facials & Skin Rejuvenation",
-      description: "Tailored to your skin's needs, our facials deeply hydrate, brighten, and refresh — helping you achieve a natural, radiant glow.",
-      tagline: "Perfect for glowing skin year-round",
-      price: "₦50,000"
-    },
-    {
       icon: <Heart className="w-8 h-8 text-spa-gold" />,
-      title: "Body Contouring",
-      description: "Sculpt and redefine your body with safe, non-invasive treatments that smooth and tone your natural curves. Confidence, reimagined.",
-      tagline: "Your confidence, redefined",
-      price: "₦150,000"
+      title: "Deep Tissue Massage",
+      description: "Therapeutic massage targeting deep muscle layers to release tension, relieve chronic pain, and promote healing.",
+      tagline: "Relief from deep within",
+      price: "₦40,000"
     },
     {
       icon: <Sun className="w-8 h-8 text-spa-gold" />,
@@ -34,25 +20,18 @@ const ServicesSection = () => {
       price: "₦160,000"
     },
     {
-      icon: <Droplets className="w-8 h-8 text-spa-gold" />,
-      title: "Chemical Peels",
-      description: "Unveil smooth, youthful-looking skin. Our gentle peels remove impurities and stimulate renewal for a fresh, revitalized glow.",
-      tagline: "Professional-grade renewal treatments",
-      price: "₦120,000"
+      icon: <Sparkles className="w-8 h-8 text-spa-gold" />,
+      title: "Manicure & Pedicure",
+      description: "Give your hands and feet the care they deserve. We combine cleansing, exfoliation, and nail perfection to leave you polished, refreshed, and glowing.",
+      tagline: "Perfect for polished elegance year-round",
+      price: "₦150,000"
     },
     {
       icon: <Zap className="w-8 h-8 text-spa-gold" />,
-      title: "Botox & Anti-Aging Care",
+      title: "Botox",
       description: "Soften fine lines and refresh your look with expert Botox treatments that enhance your natural beauty while keeping results subtle and refined.",
       tagline: "Natural results, expert precision",
       price: "₦250,000"
-    },
-    {
-      icon: <Moon className="w-8 h-8 text-spa-gold" />,
-      title: "Relaxation & Wellness Rituals",
-      description: "From soothing massages to calming spa therapies, our wellness rituals melt away stress and leave your body, mind, and soul restored.",
-      tagline: "Complete mind, body, and soul restoration",
-      price: "₦60,000"
     },
     {
       icon: <Zap className="w-8 h-8 text-spa-gold" />,
@@ -63,24 +42,24 @@ const ServicesSection = () => {
     },
     {
       icon: <Droplets className="w-8 h-8 text-spa-gold" />,
+      title: "Chemical Peel",
+      description: "Unveil smooth, youthful-looking skin. Our gentle peels remove impurities and stimulate renewal for a fresh, revitalized glow.",
+      tagline: "Professional-grade renewal treatments",
+      price: "₦50,000"
+    },
+    {
+      icon: <Droplets className="w-8 h-8 text-spa-gold" />,
       title: "Advanced Chemical Peel",
       description: "Professional-grade exfoliation that removes dead skin, reduces pigmentation, and reveals smoother, brighter skin.",
       tagline: "Transform your skin texture",
       price: "₦120,000"
     },
     {
-      icon: <Sparkles className="w-8 h-8 text-spa-gold" />,
-      title: "Full Body Waxing",
-      description: "Complete hair removal for silky-smooth skin from head to toe. Professional technique ensures comfort and lasting results.",
-      tagline: "Smooth, confident skin",
-      price: "₦60,000"
-    },
-    {
-      icon: <Heart className="w-8 h-8 text-spa-gold" />,
-      title: "Deep Tissue Massage",
-      description: "Therapeutic massage targeting deep muscle layers to release tension, relieve chronic pain, and promote healing.",
-      tagline: "Relief from deep within",
-      price: "₦40,000"
+      icon: <Flower2 className="w-8 h-8 text-spa-gold" />,
+      title: "Facials & Skin Rejuvenation",
+      description: "Tailored to your skin's needs, our facials deeply hydrate, brighten, and refresh — helping you achieve a natural, radiant glow.",
+      tagline: "Perfect for glowing skin year-round",
+      price: "₦50,000"
     },
     {
       icon: <Sun className="w-8 h-8 text-spa-gold" />,
@@ -88,6 +67,20 @@ const ServicesSection = () => {
       description: "Specialized treatment to even skin tone, reduce dark spots, and enhance your natural radiance for a glowing complexion.",
       tagline: "Reveal your inner glow",
       price: "₦35,000"
+    },
+    {
+      icon: <Moon className="w-8 h-8 text-spa-gold" />,
+      title: "Relaxation & Wellness Rituals",
+      description: "From soothing massages to calming spa therapies, our wellness rituals melt away stress and leave your body, mind, and soul restored.",
+      tagline: "Complete mind, body, and soul restoration",
+      price: "₦60,000"
+    },
+    {
+      icon: <Sparkles className="w-8 h-8 text-spa-gold" />,
+      title: "Full Body Waxing",
+      description: "Complete hair removal for silky-smooth skin from head to toe. Professional technique ensures comfort and lasting results.",
+      tagline: "Smooth, confident skin",
+      price: "₦60,000"
     }
   ];
 
