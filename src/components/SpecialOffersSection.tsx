@@ -19,8 +19,8 @@ const SpecialOffersSection = () => {
       icon: <Users className="w-8 h-8 text-spa-gold" />,
       title: "Glow Club Membership",
       discount: "25% OFF",
-      description: "Monthly membership with 3 facials + 2 body treatments. Perfect for regular self-care.",
-      features: ["3 Facials Monthly", "2 Body Treatments", "Priority Booking", "Member Discounts"],
+      description: "Monthly membership with premium facial treatments and specialized services. Perfect for regular self-care.",
+      features: ["Standard facials monthly", "Dermaplaning session monthly", "Mesotherapy OR Hyperpigmentation treatment (Rotational)", "Priority Booking", "Member Discounts"],
       validUntil: "Limited memberships available"
     },
     {

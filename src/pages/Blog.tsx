@@ -22,12 +22,6 @@ const Blog = () => {
       image: blogFacialBenefits
     },
     {
-      title: "Body Contouring: What You Need to Know",
-      excerpt: "Learn about the latest non-invasive body contouring treatments available at Nia Spa.",
-      date: "March 5, 2024",
-      image: blogBodyContouring
-    },
-    {
       title: "The Importance of Self-Care",
       excerpt: "Why taking time for yourself is essential for mental and physical wellbeing.",
       date: "March 1, 2024",

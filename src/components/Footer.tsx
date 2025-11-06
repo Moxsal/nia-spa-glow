@@ -31,8 +31,8 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-spa-warm-white mb-4">Our Services</h4>
             <ul className="space-y-2 text-spa-cream/80">
+              <li><Link to="/services" className="hover:text-spa-gold transition-spa-fast">Massage</Link></li>
               <li><Link to="/services" className="hover:text-spa-gold transition-spa-fast">Manicure & Pedicure</Link></li>
-              <li><Link to="/services" className="hover:text-spa-gold transition-spa-fast">Body Contouring</Link></li>
               <li><Link to="/services" className="hover:text-spa-gold transition-spa-fast">Botox Services</Link></li>
               <li><Link to="/services" className="hover:text-spa-gold transition-spa-fast">Hyperpigmentation</Link></li>
               <li><Link to="/contact" className="hover:text-spa-gold transition-spa-fast">Consultation</Link></li>
@@ -61,7 +61,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-2">
                 <Clock size={16} className="text-spa-gold flex-shrink-0" />
-                <span className="text-sm">Mon-Sat: 9AM-7PM</span>
+                <span className="text-sm">Mon-Sat: 9AM-7PM | Sun: 2PM-7PM</span>
               </li>
             </ul>
           </div>

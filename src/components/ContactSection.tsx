@@ -47,7 +47,7 @@ const ContactSection = () => {
     {
       icon: <Clock className="w-6 h-6 text-spa-gold" />,
       title: "Hours",
-      details: ["Mon-Sat: 9AM-7PM", "Sun: 11AM-5PM"],
+      details: ["Mon-Sat: 9AM-7PM", "Sun: 2PM-7PM"],
       link: null
     }
   ];
@@ -212,8 +212,8 @@ const ContactSection = () => {
                       required
                     >
                       <option value="">Select a service</option>
+                      <option value="Massage">Massage</option>
                       <option value="Manicure & Pedicure">Manicure & Pedicure</option>
-                      <option value="Body Contouring">Body Contouring</option>
                       <option value="Botox Services">Botox Services</option>
                       <option value="Hyperpigmentation Treatment">Hyperpigmentation Treatment</option>
                       <option value="Consultation">Consultation</option>
