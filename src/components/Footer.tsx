@@ -1,5 +1,6 @@
-import { MapPin, Phone, Mail, Instagram, Facebook, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Instagram, Facebook, Clock, MessageCircle, Star } from "lucide-react";
 import { Link } from "react-router-dom";
+import { BUSINESS } from "@/lib/business";
 
 const Footer = () => {
   return (
