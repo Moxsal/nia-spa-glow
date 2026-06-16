@@ -2,9 +2,10 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
-import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, MessageCircle, Star, Navigation as NavIcon, ExternalLink } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { BUSINESS } from "@/lib/business";
 
 const ContactSection = () => {
   const { toast } = useToast();
@@ -274,6 +275,47 @@ const ContactSection = () => {
                 </form>
               </CardContent>
             </Card>
+          </div>
+        </div>
+
+        {/* Google Map + buttons */}
+        <div className="mt-16">
+          <div className="text-center mb-6">
+            <h3 className="text-2xl md:text-3xl font-bold text-spa-text-primary mb-2">
+              Visit Our Lekki Spa
+            </h3>
+            <p className="text-spa-text-secondary">
+              {BUSINESS.address}
+            </p>
+          </div>
+          <div className="rounded-2xl overflow-hidden shadow-spa-medium border border-spa-sage-light/30">
+            <iframe
+              title="Nia Spa Aesthetics on Google Maps"
+              src={BUSINESS.google.embed}
+              width="100%"
+              height="420"
+              style={{ border: 0 }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
+          </div>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center mt-6">
+            <a href={BUSINESS.google.directions} target="_blank" rel="noopener noreferrer">
+              <Button size="lg" variant="pink" className="font-semibold">
+                <NavIcon className="mr-2" size={18} /> Get Directions
+              </Button>
+            </a>
+            <a href={BUSINESS.google.reviews} target="_blank" rel="noopener noreferrer">
+              <Button size="lg" variant="outline" className="border-spa-sage text-spa-text-primary">
+                <Star className="mr-2" size={18} fill="currentColor" /> View Google Reviews
+              </Button>
+            </a>
+            <a href={BUSINESS.google.profile} target="_blank" rel="noopener noreferrer">
+              <Button size="lg" variant="outline" className="border-spa-sage text-spa-text-primary">
+                <ExternalLink className="mr-2" size={18} /> Find Us on Google
+              </Button>
+            </a>
           </div>
         </div>
       </div>

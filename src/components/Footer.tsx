@@ -1,5 +1,6 @@
-import { MapPin, Phone, Mail, Instagram, Facebook, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Instagram, Facebook, Clock, MessageCircle, Star } from "lucide-react";
 import { Link } from "react-router-dom";
+import { BUSINESS } from "@/lib/business";
 
 const Footer = () => {
   return (
@@ -54,9 +55,21 @@ const Footer = () => {
                 </a>
               </li>
               <li className="flex items-center gap-2">
+                <MessageCircle size={16} className="text-spa-gold flex-shrink-0" />
+                <a href={BUSINESS.whatsappLink} target="_blank" rel="noopener noreferrer" className="text-sm hover:text-spa-gold transition-spa-fast">
+                  WhatsApp: {BUSINESS.whatsapp}
+                </a>
+              </li>
+              <li className="flex items-center gap-2">
                 <Mail size={16} className="text-spa-gold flex-shrink-0" />
                 <a href="mailto:Gina@nia-spa.com" className="text-sm hover:text-spa-gold transition-spa-fast">
                   Gina@nia-spa.com
+                </a>
+              </li>
+              <li className="flex items-center gap-2">
+                <Star size={16} className="text-spa-gold flex-shrink-0" />
+                <a href={BUSINESS.google.profile} target="_blank" rel="noopener noreferrer" className="text-sm hover:text-spa-gold transition-spa-fast">
+                  Find Us on Google
                 </a>
               </li>
               <li className="flex items-center gap-2">

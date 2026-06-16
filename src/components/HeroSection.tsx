@@ -1,19 +1,26 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Phone, MapPin } from "lucide-react";
+import { Phone, MapPin, MessageCircle } from "lucide-react";
 import heroImage from "@/assets/hero-massage-table.jpg";
+import heroVideo from "@/assets/videos/spa-experience.mp4.asset.json";
+import { BUSINESS } from "@/lib/business";
 
 const HeroSection = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background Image */}
+      {/* Background Video with image fallback */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src={heroImage} 
-          alt="Luxurious Nia Spa Aesthetics massage treatment with hot stones and aromatherapy in Lagos Nigeria"
+        <video
+          src={heroVideo.url}
+          poster={heroImage}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-spa-sage-dark/40"></div>
+        <div className="absolute inset-0 bg-spa-sage-dark/55"></div>
       </div>
 
       {/* Content */}
@@ -23,56 +30,61 @@ const HeroSection = () => {
             Relax. Renew.{" "}
             <span className="text-spa-gold">Rejuvenate.</span>
           </h1>
-          
+
           <p className="text-xl md:text-2xl text-spa-cream mb-8 leading-relaxed">
-            At Nia Spa Aesthetics, Lekki, we believe self-care is health care. 
-            Experience luxurious treatments designed to enhance your natural beauty 
+            At Nia Spa Aesthetics, Lekki, we believe self-care is health care.
+            Experience luxurious treatments designed to enhance your natural beauty
             and restore your inner peace.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-8">
             <Link to="/contact">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="bg-spa-gold hover:bg-spa-gold-light text-spa-text-primary font-semibold px-8 py-6 text-lg shadow-spa-medium"
               >
                 Book Your Session
               </Button>
             </Link>
-            <Link to="/services">
-              <Button 
-                variant="outline" 
+            <a href={BUSINESS.whatsappLink} target="_blank" rel="noopener noreferrer">
+              <Button
                 size="lg"
+                variant="outline"
                 className="border-spa-warm-white text-spa-warm-white hover:bg-spa-warm-white hover:text-spa-text-primary px-8 py-6 text-lg"
               >
-                View Services
+                <MessageCircle size={20} className="mr-2" /> WhatsApp Us
               </Button>
-            </Link>
+            </a>
           </div>
 
           {/* Quick Contact Info */}
           <div className="flex flex-col sm:flex-row gap-6 text-spa-cream">
-            <a 
-              href="tel:+2347015545783" 
+            <a
+              href={`tel:${BUSINESS.phone}`}
               className="flex items-center gap-2 hover:text-spa-gold transition-spa-fast cursor-pointer"
             >
               <Phone size={20} />
-              <span>+2347015545783</span>
+              <span>{BUSINESS.phone}</span>
             </a>
-            <div className="flex items-center gap-2">
+            <a
+              href={BUSINESS.google.directions}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 hover:text-spa-gold transition-spa-fast"
+            >
               <MapPin size={20} />
               <span>20 Dele Adeyemi Street, Agungi East Estate</span>
-            </div>
+            </a>
           </div>
         </div>
       </div>
 
-      {/* Floating Elements */}
+      {/* Floating Element */}
       <div className="absolute bottom-10 right-10 hidden lg:block">
         <div className="bg-spa-warm-white/10 backdrop-blur-sm rounded-full p-6 shadow-spa-soft">
           <div className="text-spa-warm-white text-center">
             <div className="text-2xl font-bold">5★</div>
-            <div className="text-sm">Rated Spa</div>
+            <div className="text-sm">Rated on Google</div>
           </div>
         </div>
       </div>
