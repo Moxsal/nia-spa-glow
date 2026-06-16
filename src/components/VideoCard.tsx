@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Play } from "lucide-react";
+import { Volume2, VolumeX } from "lucide-react";
 
 interface VideoCardProps {
   src: string;
@@ -7,36 +7,52 @@ interface VideoCardProps {
   title: string;
   description?: string;
   className?: string;
+  aspect?: "portrait" | "video" | "square";
 }
 
-const VideoCard = ({ src, poster, title, description, className = "" }: VideoCardProps) => {
+const VideoCard = ({
+  src,
+  poster,
+  title,
+  description,
+  className = "",
+  aspect = "portrait",
+}: VideoCardProps) => {
   const ref = useRef<HTMLVideoElement>(null);
-  const [playing, setPlaying] = useState(false);
-  const [inView, setInView] = useState(false);
+  const [muted, setMuted] = useState(true);
 
+  // Auto play/pause based on viewport visibility
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
     const obs = new IntersectionObserver(
-      ([entry]) => setInView(entry.isIntersecting),
-      { threshold: 0.25 }
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          el.play().catch(() => {});
+        } else {
+          el.pause();
+        }
+      },
+      { threshold: 0.35 }
     );
     obs.observe(el);
     return () => obs.disconnect();
   }, []);
 
-  const toggle = () => {
+  const toggleMute = () => {
     const v = ref.current;
     if (!v) return;
-    if (v.paused) {
-      v.muted = false;
-      v.play();
-      setPlaying(true);
-    } else {
-      v.pause();
-      setPlaying(false);
-    }
+    v.muted = !v.muted;
+    setMuted(v.muted);
+    if (!v.muted) v.play().catch(() => {});
   };
+
+  const aspectClass =
+    aspect === "video"
+      ? "aspect-video"
+      : aspect === "square"
+      ? "aspect-square"
+      : "aspect-[9/16]";
 
   return (
     <div
@@ -49,22 +65,17 @@ const VideoCard = ({ src, poster, title, description, className = "" }: VideoCar
         muted
         loop
         playsInline
+        autoPlay
         preload="metadata"
-        autoPlay={inView}
-        className="w-full h-full object-cover aspect-[9/16] md:aspect-video"
-        onClick={toggle}
+        className={`w-full h-full object-cover ${aspectClass}`}
       />
-      {!playing && (
-        <button
-          aria-label={`Play ${title}`}
-          onClick={toggle}
-          className="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-spa-sage-dark/70 via-transparent to-transparent"
-        >
-          <span className="p-5 rounded-full bg-spa-gold/90 text-spa-text-primary shadow-spa-strong group-hover:scale-110 transition-spa">
-            <Play size={28} fill="currentColor" />
-          </span>
-        </button>
-      )}
+      <button
+        onClick={toggleMute}
+        aria-label={muted ? "Unmute video" : "Mute video"}
+        className="absolute top-3 right-3 p-2 rounded-full bg-spa-sage-dark/60 backdrop-blur-sm text-spa-warm-white opacity-0 group-hover:opacity-100 transition-spa-fast"
+      >
+        {muted ? <VolumeX size={18} /> : <Volume2 size={18} />}
+      </button>
       <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-spa-sage-dark/90 to-transparent pointer-events-none">
         <h3 className="text-spa-warm-white font-semibold">{title}</h3>
         {description && (

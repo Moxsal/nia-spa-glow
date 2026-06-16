@@ -3,8 +3,10 @@ import video1 from "@/assets/videos/spa-experience.mp4.asset.json";
 import video2 from "@/assets/videos/spa-treatment.mp4.asset.json";
 import video3 from "@/assets/videos/spa-facial.mp4.asset.json";
 import video4 from "@/assets/videos/spa-relaxation.mp4.asset.json";
+import video5 from "@/assets/videos/spa-signature.mp4.asset.json";
 
 const videos = [
+  { src: video5.url, title: "Our Signature Experience", description: "The Nia Spa difference, in motion" },
   { src: video1.url, title: "Inside Nia Spa", description: "A look at our serene Lekki sanctuary" },
   { src: video2.url, title: "Signature Treatments", description: "Crafted by our expert therapists" },
   { src: video3.url, title: "Facial & Skin Rituals", description: "Glow-restoring care, every visit" },
@@ -33,7 +35,7 @@ const VideoShowcase = ({
             {subtitle}
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
           {videos.map((v, i) => (
             <VideoCard key={i} {...v} />
           ))}
