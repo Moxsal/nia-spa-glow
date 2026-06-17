@@ -28,6 +28,7 @@ const VideoCard = ({
     const obs = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
+          el.load();
           el.play().catch(() => {});
         } else {
           el.pause();
@@ -66,7 +67,7 @@ const VideoCard = ({
         loop
         playsInline
         autoPlay
-        preload="metadata"
+        preload="auto"
         className={`w-full h-full object-cover ${aspectClass}`}
       />
       <button
