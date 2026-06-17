@@ -4,13 +4,14 @@ import video2 from "@/assets/videos/spa-treatment.mp4.asset.json";
 import video3 from "@/assets/videos/spa-facial.mp4.asset.json";
 import video4 from "@/assets/videos/spa-relaxation.mp4.asset.json";
 import video5 from "@/assets/videos/spa-signature.mp4.asset.json";
+import { getHostedAssetUrl } from "@/lib/assets";
 
 const videos = [
-  { src: video5.url, title: "Our Signature Experience", description: "The Nia Spa difference, in motion" },
-  { src: video1.url, title: "Inside Nia Spa", description: "A look at our serene Lekki sanctuary" },
-  { src: video2.url, title: "Signature Treatments", description: "Crafted by our expert therapists" },
-  { src: video3.url, title: "Facial & Skin Rituals", description: "Glow-restoring care, every visit" },
-  { src: video4.url, title: "Pure Relaxation", description: "Where you unwind, renew, rejuvenate" },
+  { src: getHostedAssetUrl(video5.url), title: "Our Signature Experience", description: "The Nia Spa difference, in motion" },
+  { src: getHostedAssetUrl(video1.url), title: "Inside Nia Spa", description: "A look at our serene Lekki sanctuary" },
+  { src: getHostedAssetUrl(video2.url), title: "Signature Treatments", description: "Crafted by our expert therapists" },
+  { src: getHostedAssetUrl(video3.url), title: "Facial & Skin Rituals", description: "Glow-restoring care, every visit" },
+  { src: getHostedAssetUrl(video4.url), title: "Pure Relaxation", description: "Where you unwind, renew, rejuvenate" },
 ];
 
 interface Props {
