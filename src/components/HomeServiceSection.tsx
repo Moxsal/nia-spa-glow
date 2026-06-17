@@ -3,6 +3,7 @@ import { Home, ShieldCheck, Clock, Sparkles, MessageCircle } from "lucide-react"
 import VideoCard from "@/components/VideoCard";
 import video from "@/assets/videos/spa-relaxation.mp4.asset.json";
 import { BUSINESS } from "@/lib/business";
+import { getHostedAssetUrl } from "@/lib/assets";
 
 const benefits = [
   { icon: Home, title: "In the comfort of your home", text: "Skip the traffic. Enjoy spa-grade treatments in your own space." },
@@ -64,7 +65,7 @@ const HomeServiceSection = () => {
 
           <div>
             <VideoCard
-              src={video.url}
+              src={getHostedAssetUrl(video.url)}
               title="At-home spa, redefined"
               description="Calm, clean and curated — the Nia experience, your space"
             />
