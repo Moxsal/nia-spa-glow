@@ -87,13 +87,7 @@ const ServicesSection = () => {
                   {service.description}
                 </p>
 
-                {service.price && (
-                  <div className="mb-6">
-                    <span className="inline-block px-4 py-2 bg-spa-gold-light text-spa-text-primary font-bold text-xl rounded-lg">
-                      {service.price}
-                    </span>
-                  </div>
-                )}
+                <div className="mb-6" />
 
                 <Button 
                   className="w-full bg-spa-gold hover:bg-spa-gold-light text-spa-text-primary font-semibold"

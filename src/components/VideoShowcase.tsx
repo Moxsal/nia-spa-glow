@@ -1,6 +1,4 @@
 import VideoCard from "@/components/VideoCard";
-import video1 from "@/assets/videos/spa-experience.mp4.asset.json";
-import video2 from "@/assets/videos/spa-treatment.mp4.asset.json";
 import video4 from "@/assets/videos/spa-relaxation.mp4.asset.json";
 import video5 from "@/assets/videos/spa-signature.mp4.asset.json";
 import videoStretch from "@/assets/videos/spa-stretch.mp4.asset.json";
@@ -9,8 +7,6 @@ import { getHostedAssetUrl } from "@/lib/assets";
 const videos = [
   { src: getHostedAssetUrl(video5.url), title: "Our Signature Experience", description: "The Nia Spa difference, in motion" },
   { src: getHostedAssetUrl(videoStretch.url), title: "Therapeutic Stretch", description: "Tension released, body restored" },
-  { src: getHostedAssetUrl(video1.url), title: "Inside a Nia Session", description: "Calm moments crafted just for you" },
-  { src: getHostedAssetUrl(video2.url), title: "Signature Treatments", description: "Crafted with expert precision" },
   { src: getHostedAssetUrl(video4.url), title: "Pure Relaxation", description: "Where you unwind, renew, rejuvenate" },
 ];
 
@@ -36,7 +32,7 @@ const VideoShowcase = ({
             {subtitle}
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {videos.map((v, i) => (
             <VideoCard key={i} {...v} />
           ))}

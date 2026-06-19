@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Users, Award, Heart, Shield } from "lucide-react";
+import { Heart, Shield, Sparkles } from "lucide-react";
 
 const AboutSection = () => {
   const values = [
@@ -14,12 +14,7 @@ const AboutSection = () => {
       description: "We use only FDA-approved products and maintain the highest hygiene standards."
     },
     {
-      icon: <Award className="w-6 h-6 text-spa-gold" />,
-      title: "Expert Team",
-      description: "Our certified professionals bring years of experience in aesthetic care."
-    },
-    {
-      icon: <Users className="w-6 h-6 text-spa-gold" />,
+      icon: <Sparkles className="w-6 h-6 text-spa-gold" />,
       title: "Client-Centered",
       description: "Your comfort, satisfaction, and well-being are our top priorities."
     }
@@ -74,7 +69,7 @@ const AboutSection = () => {
           </div>
 
           {/* Values Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {values.map((value, index) => (
               <Card key={index} className="bg-spa-card border-spa-sage-light/20 shadow-spa-soft hover:shadow-spa-medium transition-spa">
                 <CardContent className="p-6 text-center">
