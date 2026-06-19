@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Home, ShieldCheck, Clock, Sparkles, MessageCircle } from "lucide-react";
+import { Home, Clock, Sparkles, MessageCircle } from "lucide-react";
 import VideoCard from "@/components/VideoCard";
 import video from "@/assets/videos/spa-relaxation.mp4.asset.json";
 import { BUSINESS } from "@/lib/business";
