@@ -118,7 +118,7 @@ const SpecialOffersSection = () => {
               wellness designed around you.
             </p>
             <Button size="lg" className="bg-spa-gold hover:bg-spa-gold-light text-spa-text-primary font-semibold" asChild>
-              <Link to="/contact">Book Now & Save</Link>
+              <Link to="/contact">Book Now</Link>
             </Button>
           </div>
         </div>
