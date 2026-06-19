@@ -1,13 +1,13 @@
 import Navigation from "@/components/Navigation";
-import TestimonialsSection from "@/components/TestimonialsSection";
 import Footer from "@/components/Footer";
+import GoogleReviewsSection from "@/components/GoogleReviewsSection";
 
 const Testimonials = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
       <main className="pt-16">
-        <TestimonialsSection />
+        <GoogleReviewsSection />
       </main>
       <Footer />
     </div>

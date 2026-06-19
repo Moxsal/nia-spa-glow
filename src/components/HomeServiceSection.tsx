@@ -7,7 +7,6 @@ import { getHostedAssetUrl } from "@/lib/assets";
 
 const benefits = [
   { icon: Home, title: "In the comfort of your home", text: "Skip the traffic. Enjoy spa-grade treatments in your own space." },
-  { icon: ShieldCheck, title: "Trained, vetted specialists", text: "Same expert therapists you'd meet at our Lekki location." },
   { icon: Sparkles, title: "Premium products & tools", text: "We bring our luxury product line and sanitised equipment to you." },
   { icon: Clock, title: "Flexible scheduling", text: "Mornings, evenings or weekends — booked around your day." },
 ];
@@ -31,8 +30,8 @@ const HomeServiceSection = () => {
             </h2>
             <p className="text-lg text-spa-text-secondary mb-8 leading-relaxed">
               Enjoy professional spa and aesthetic treatments in the comfort and privacy of your own home.
-              Our experienced specialists bring premium care, relaxation and beauty rituals directly to you —
-              with the same exceptional quality you receive at our Lekki spa.
+              Every appointment is personally handled by our founder, ensuring meticulous, one-on-one care
+              with premium products and a truly bespoke experience.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-5 mb-8">
