@@ -9,7 +9,6 @@ const SpecialOffersSection = () => {
     {
       icon: <Sparkles className="w-8 h-8 text-spa-gold" />,
       title: "New Client Special",
-      discount: "30% OFF",
       description: "Perfect introduction package including consultation + choice of facial session.",
       features: ["Free Consultation", "Choice of Service", "Skincare Sample Kit"],
       validUntil: "Valid until end of month",
@@ -18,15 +17,13 @@ const SpecialOffersSection = () => {
     {
       icon: <Users className="w-8 h-8 text-spa-gold" />,
       title: "Glow Club Membership",
-      discount: "25% OFF",
       description: "Monthly membership with premium facial treatments and specialized services. Perfect for regular self-care.",
-      features: ["Standard facials monthly", "Dermaplaning session monthly", "Mesotherapy OR Hyperpigmentation treatment (Rotational)", "Priority Booking", "Member Discounts"],
+      features: ["Standard facials monthly", "Dermaplaning session monthly", "Mesotherapy OR Hyperpigmentation treatment (Rotational)", "Priority Booking", "Member Perks"],
       validUntil: "Limited memberships available"
     },
     {
       icon: <Gift className="w-8 h-8 text-spa-gold" />,
       title: "Couples Spa Day",
-      discount: "Special Offer",
       description: "Romantic spa experience for two. Includes side-by-side treatments and refreshments.",
       features: ["Couples Massage", "Facial for Two", "Champagne & Snacks"],
       validUntil: "Perfect for anniversaries"
@@ -56,14 +53,11 @@ const SpecialOffersSection = () => {
               )}
               
               <CardContent className="p-8">
-                {/* Icon & Badge */}
+                {/* Icon */}
                 <div className="flex items-center justify-between mb-6">
                   <div className="p-3 bg-spa-gold-light rounded-full">
                     {offer.icon}
                   </div>
-                  <Badge variant="outline" className="border-spa-gold text-spa-gold">
-                    {offer.discount}
-                  </Badge>
                 </div>
 
                 {/* Title */}
@@ -120,8 +114,8 @@ const SpecialOffersSection = () => {
               Ready to Book?
             </h3>
             <p className="text-spa-text-secondary mb-6">
-              These offers are limited time only. Don't miss out on experiencing luxury 
-              wellness at unbeatable prices.
+              These offers are limited time only. Don't miss out on experiencing premium 
+              wellness designed around you.
             </p>
             <Button size="lg" className="bg-spa-gold hover:bg-spa-gold-light text-spa-text-primary font-semibold" asChild>
               <Link to="/contact">Book Now & Save</Link>
