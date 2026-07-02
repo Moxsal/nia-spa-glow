@@ -2,27 +2,21 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Phone, MapPin, MessageCircle } from "lucide-react";
 import heroImage from "@/assets/hero-massage-table.jpg";
-import heroVideo from "@/assets/videos/spa-signature.mp4.asset.json";
 import { BUSINESS } from "@/lib/business";
-import { getHostedAssetUrl } from "@/lib/assets";
 
 const HeroSection = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background Video with image fallback */}
+      {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <video
-          src={getHostedAssetUrl(heroVideo.url)}
-          poster={heroImage}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
+        <img
+          src={heroImage}
+          alt="Luxury spa treatment room at Nia Spa Aesthetics"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-spa-sage-dark/55"></div>
       </div>
+
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
