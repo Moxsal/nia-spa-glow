@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Phone, MapPin, MessageCircle } from "lucide-react";
 import heroImage from "@/assets/hero-massage-table.jpg";
-import heroVideo from "@/assets/videos/spa-experience.mp4.asset.json";
+import heroVideo from "@/assets/videos/spa-signature.mp4.asset.json";
 import { BUSINESS } from "@/lib/business";
 import { getHostedAssetUrl } from "@/lib/assets";
 
