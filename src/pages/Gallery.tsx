@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import GallerySection from "@/components/GallerySection";
-import VideoShowcase from "@/components/VideoShowcase";
 import Footer from "@/components/Footer";
 
 const Gallery = () => {
@@ -9,10 +8,6 @@ const Gallery = () => {
       <Navigation />
       <main className="pt-16">
         <GallerySection />
-        <VideoShowcase
-          title="Watch Our Spa Come to Life"
-          subtitle="Treatments, ambience and results — captured in motion."
-        />
       </main>
       <Footer />
     </div>

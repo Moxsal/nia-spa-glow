@@ -1,9 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Home, Clock, Sparkles, MessageCircle } from "lucide-react";
-import VideoCard from "@/components/VideoCard";
-import video from "@/assets/videos/spa-relaxation.mp4.asset.json";
+import homeServiceImage from "@/assets/treatment-room-facial.jpg";
 import { BUSINESS } from "@/lib/business";
-import { getHostedAssetUrl } from "@/lib/assets";
+
 
 const benefits = [
   { icon: Home, title: "In the comfort of your home", text: "Skip the traffic. Enjoy spa-grade treatments in your own space." },
@@ -63,11 +62,18 @@ const HomeServiceSection = () => {
           </div>
 
           <div>
-            <VideoCard
-              src={getHostedAssetUrl(video.url)}
-              title="At-home spa, redefined"
-              description="Calm, clean and curated — the Nia experience, your space"
+          <div className="relative rounded-2xl overflow-hidden shadow-spa-medium">
+            <img
+              src={homeServiceImage}
+              alt="At-home luxury spa treatment by Nia Spa Aesthetics"
+              className="w-full h-full object-cover aspect-[4/5]"
             />
+            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-spa-sage-dark/80 to-transparent p-6">
+              <h3 className="text-xl font-semibold text-spa-warm-white">At-home spa, redefined</h3>
+              <p className="text-spa-cream text-sm">Calm, clean and curated — the Nia experience, your space</p>
+            </div>
+          </div>
+
           </div>
         </div>
       </div>

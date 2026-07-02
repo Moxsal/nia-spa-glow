@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
-import VideoShowcase from "@/components/VideoShowcase";
 import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/ServicesSection";
 import SpecialOffersSection from "@/components/SpecialOffersSection";
@@ -18,7 +17,6 @@ const Index = () => {
         <HeroSection />
         <AboutSection />
         <ServicesSection />
-        <VideoShowcase />
         <SpecialOffersSection />
         <GallerySection />
         <HomeServiceSection />
@@ -31,3 +29,4 @@ const Index = () => {
 };
 
 export default Index;
+
